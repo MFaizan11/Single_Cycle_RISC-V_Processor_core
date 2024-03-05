@@ -9,7 +9,6 @@ build:
 	verilator -Wall --trace -cc Single_Cycle.sv --exe tb_Single_Cycle.cpp -Wno-fatal -Wno-WIDTH -Wno-CASEINCOMPLETE
 	make -C obj_dir -f VSingle_Cycle.mk VSingle_Cycle -Wno-fatal -Wno-WIDTH -Wno-CASEINCOMPLETE
 
+.PHONY: clean
 clean:
 	rm -rf obj_dir waveform.vcd
-
-.PHONY: clean
